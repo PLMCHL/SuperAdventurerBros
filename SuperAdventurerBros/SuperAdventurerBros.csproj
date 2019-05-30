@@ -72,34 +72,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\sprites\idle\adventurer-idle-00.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\sprites\idle\adventurer-idle-01.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\sprites\idle\adventurer-idle-02.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\sprites\idle\adventurer-idle-03.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\sprites\idle\adventurer-idle-2-00.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\sprites\idle\adventurer-idle-2-01.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\sprites\idle\adventurer-idle-2-02.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\sprites\idle\adventurer-idle-2-03.png">
+    <Content Include="Content\sprites\idle\adventurer-idle-0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Game.ico" />
     <Content Include="SDL.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\sprites\idle\adventurer-idle-0.plist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

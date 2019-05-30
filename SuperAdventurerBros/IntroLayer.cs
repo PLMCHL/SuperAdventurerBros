@@ -10,12 +10,38 @@ namespace SuperAdventurerBros
 
         public IntroLayer()
         {
+            // setup our color for the background
+            Color = new CCColor3B(Microsoft.Xna.Framework.Color.Gray);
+            Opacity = 255;
+
+            initAdventurer();
+            initLabel();
+        }
+        private void initAdventurer()
+        {
             // Adventurer Idle
-            sprite = new CCSprite("sprites/idle/adventurer-idle-00");
+            sprite = new CCSprite();
             sprite.Position = CCDirector.SharedDirector.WinSize.Center;
             sprite.Scale = 4f;
             AddChild(sprite);
             
+            var spriteSheet = new CCSpriteSheet("sprites/idle/adventurer-idle-0.plist");
+
+            // Find all frames whose name contains "walk". walk1, walk2, walk3, etc.
+            var idleFrames = spriteSheet.Frames.FindAll(x => x.Texture.Name.Name.Contains("idle"));
+
+            // Create an animation that cycles through the walk frames.
+            var idleAnimation = new CCAnimation(idleFrames, 0.1f);
+
+            // Create an action that repeats the animation forever. 
+            var idleRepeat = new CCRepeatForever(new CCAnimate(idleAnimation));
+
+            // Add the repeating animation action to the sprite.
+            sprite.RunAction(idleRepeat);
+        }
+
+        private void initLabel()
+        {
             // create and initialize a Label
             var label = new CCLabelTTF("Super Adventurer Bros", "MarkerFelt", 22);
 
@@ -26,12 +52,8 @@ namespace SuperAdventurerBros
 
             // add the label as a child to this Layer
             AddChild(label);
-
-            // setup our color for the background
-            Color = new CCColor3B(Microsoft.Xna.Framework.Color.Gray);
-            Opacity = 255;
-
         }
+
 
         public static CCScene Scene
         {
