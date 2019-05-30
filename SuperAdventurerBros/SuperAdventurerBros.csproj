@@ -36,6 +36,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Box2DDebug.cs" />
+    <Compile Include="CCPhysicsSprite.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="IntroLayer.cs" />
     <Compile Include="Program.cs" />
@@ -73,14 +75,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\sprites\idle\adventurer-idle-0.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\sprites\idle\adventurer-idle-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Game.ico" />
     <Content Include="SDL.dll" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\sprites\idle\adventurer-idle-0.plist">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\sprites\idle\adventurer-idle-1.plist">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
   </ItemGroup>
